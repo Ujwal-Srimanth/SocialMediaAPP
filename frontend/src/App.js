@@ -12,6 +12,8 @@ import { useSelector } from 'react-redux';
 function App() {
   const mode = useSelector((state)=>state.mode)
   const theme = useMemo(()=>createTheme(themeSettings(mode)),[mode])
+  const isAuth = Boolean(useSelector((state) => (state.token)));
+  console.log(isAuth)
   return (
     <div className="app">
       <BrowserRouter>
@@ -19,8 +21,8 @@ function App() {
           <CssBaseline>
         <Routes>
           <Route path="/" element={<LoginPage></LoginPage>}></Route>
-          <Route path="/home" element={<HomePage></HomePage>}></Route>
-          <Route path="/profile/:userId" element={<ProfilePage></ProfilePage>}></Route>
+          <Route path="/home" element={isAuth ? <HomePage></HomePage> : <Navigate to="/"></Navigate>}></Route>
+          <Route path="/profile/:userId" element={isAuth ? <ProfilePage></ProfilePage> : <Navigate to = "/"></Navigate>}></Route>
         </Routes>
         </CssBaseline>
         </ThemeProvider>

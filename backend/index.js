@@ -14,9 +14,8 @@ import userRoutes from "./routes/user.js"
 import postRoutes from "./routes/post.js"
 import { verifyToken } from "./middleware/auth.js"
 import {createPost} from "./controllers/posts.js"
-import User from "./models/User.js"
-import Post from "./models/Post.js"
-import {users,posts} from "./data/index.js"
+
+
 
 
 const __filename = fileURLToPath(import.meta.url)
@@ -25,13 +24,16 @@ dotenv.config()
 
 const app = express();
 app.use(express.json())
-app.use(helmet)
+app.use(helmet())
 app.use(helmet.crossOriginResourcePolicy({policy:"cross-origin"}))
 app.use(morgan("common"))
 app.use(bodyParser.json({limit:"30mb",extended:true}))
 app.use(bodyParser.urlencoded({limit:"30mb",extended:true}))
-app.use(cors())
-app.use('/assests',express.static(path.join(__dirname,'public/assets')))
+app.use(cors({
+    origin: "http://localhost:3000", // Allow requests from this origin
+    credentials: true, // Allow credentials (e.g., cookies, authorization headers)
+}));
+app.use('/assets',express.static(path.join(__dirname,'public/assets')))
 
 const storage = multer.diskStorage({
     destination: function(req,file,cb){
@@ -54,9 +56,6 @@ const PORT = process.env.PORT || 6001;
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     app.listen(PORT,()=>{
         console.log(`Server Port ${PORT}`)
-        /*inset dummy data at the start*/
-        // User.insertMany(users);
-        // Post.insertMany(posts);
     })
 }).catch((err)=>{
     console.log(`mongo did not connect ${err}`)

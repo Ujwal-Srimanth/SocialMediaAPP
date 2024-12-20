@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema({
     },
     friends:{
         type:Array,
-        defualt:[]
+        default:[]
     },
     location:String,
     occupation:String,
