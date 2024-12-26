@@ -12,6 +12,12 @@ This is a feature-rich social media application developed using **React**, **Red
 - **Sponsored Ads**: Display of sponsored advertisements.
 - **View Other Profiles**: Explore profiles of other users.
 
+  ### Upcoming Features
+
+- **Comments**: Add and view comments on posts.
+- **Messaging**: Send messages to other users along with notifications.
+- **Media Uploads**: Upload audio clips, video clips, and attachments.
+
 ## Project Structure
 
 The project is divided into two main folders:
@@ -99,7 +105,5 @@ Contributions are welcome! Please follow these steps:
 5. Open a pull request.
 
 
-## Contact
 
-For any queries, feel free to contact me:
-- **GitHub**: [Ujwal-Srimanth](https://github.com/Ujwal-Srimanth)
+
