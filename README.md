@@ -1,6 +1,8 @@
+
+
 # Social Media Application
 
-This is a feature-rich social media application developed using **React**, **Redux**, **MongoDB**, **Node.js**, **Express**, and **MUI**. The application provides functionalities like creating accounts, uploading posts, liking posts, managing profiles, adding/removing friends, and more. It also supports both dark mode and light mode themes.
+This is a feature-rich social media application developed using **React**, **Redux**, **MongoDB**, **Node.js**, **Express**, and **MUI**. The application provides functionalities like creating accounts, uploading posts, liking posts, managing profiles, adding/removing friends, and more. It also supports both dark mode and light mode themes. Recently, a **basic chat application** feature has been added, allowing users to chat with friends in real time, with **seen** and **delivered** indicators.
 
 ## Features
 
@@ -8,15 +10,18 @@ This is a feature-rich social media application developed using **React**, **Red
 - **Post Management**: Upload posts, view posts, and like them.
 - **Profile Section**: View and edit your profile.
 - **Friend Management**: Add and remove friends.
+- **Chat Application**: 
+  - Send and receive messages in real time.
+  - View **delivered** and **seen** statuses for messages.
 - **Theme Options**: Switch between dark mode and light mode.
 - **Sponsored Ads**: Display of sponsored advertisements.
 - **View Other Profiles**: Explore profiles of other users.
 
-  ### Upcoming Features
+### Upcoming Features
 
 - **Comments**: Add and view comments on posts.
-- **Messaging**: Send messages to other users along with notifications.
-- **Media Uploads**: Upload audio clips, video clips, and attachments.
+- **Advanced Messaging**: Notifications and multimedia sharing (audio, video, attachments).
+- **Public Private Feature**: Public Private Featuring Mimicing Instagram.
 
 ## Project Structure
 
@@ -35,8 +40,8 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone <repository-link>
-   cd <repository-folder>
+   git clone https://github.com/Ujwal-Srimanth/SocialMediaAPP.git
+   cd SocialMediaAPP
    ```
 
 2. Install dependencies for both backend and frontend:
@@ -93,7 +98,8 @@ Make sure you have the following installed:
   - Express
 - **Database**:
   - MongoDB
-
+- **Real-time Communication**:
+  - Socket.IO (for chat functionality)
 
 ## Contributing
 
@@ -104,6 +110,4 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature-name`).
 5. Open a pull request.
 
-
-
-
+---
