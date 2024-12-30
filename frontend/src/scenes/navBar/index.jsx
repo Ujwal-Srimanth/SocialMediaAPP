@@ -71,7 +71,7 @@ const NavBar = () => {
                     <LightMode fontSize="25px" color="dark"></LightMode>
                 )}
             </IconButton>
-            <Message sx={{fontSize:'25px'}}></Message>
+            <Message sx={{fontSize:'25px'}} onClick={() => navigate("/chat")}></Message>
             <Notifications sx={{fontSize:'25px'}}></Notifications>
             <Help sx={{fontSize:'25px'}}></Help>
             <FormControl variant="standard" value={fullName}>

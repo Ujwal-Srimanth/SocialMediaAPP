@@ -3,6 +3,7 @@ import {BrowserRouter,Navigate,Routes,Route} from 'react-router-dom';
 import HomePage from './scenes/homePage';
 import LoginPage from './scenes/loginPage';
 import ProfilePage from './scenes/profilePage';
+import ChatPage from './scenes/chatPage'
 import { useMemo } from 'react';
 import {CssBaseline,ThemeProvider} from '@mui/material';
 import {createTheme} from '@mui/material/styles';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<LoginPage></LoginPage>}></Route>
           <Route path="/home" element={isAuth ? <HomePage></HomePage> : <Navigate to="/"></Navigate>}></Route>
           <Route path="/profile/:userId" element={isAuth ? <ProfilePage></ProfilePage> : <Navigate to = "/"></Navigate>}></Route>
+          <Route path = "/chat" element={isAuth ? <ChatPage></ChatPage>: <Navigate to = "/"></Navigate>}></Route>
         </Routes>
         </CssBaseline>
         </ThemeProvider>
