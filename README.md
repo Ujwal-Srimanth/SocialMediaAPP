@@ -19,7 +19,6 @@ This is a feature-rich social media application developed using **React**, **Red
 
 ### Upcoming Features
 
-- **Comments**: Add and view comments on posts.
 - **Advanced Messaging**: Notifications and multimedia sharing (audio, video, attachments).
 - **Public Private Feature**: Public Private Featuring Mimicing Instagram.
 
